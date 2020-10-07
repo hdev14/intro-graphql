@@ -10,6 +10,9 @@ module.exports = {
     createUser: (_, { name, email }) => User.create({ name, email }),
     updateUser: (_, { id, name, email }) => {
       return User.findByIdAndUpdate(id, { name, email })
+    },
+    deleteUser: (_, { id }) => {
+      return User.findByIdAndDelete(id)
     }
   }
 }
