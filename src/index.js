@@ -5,7 +5,8 @@ const resolvers = require('./resolvers')
 
 mongoose.connect('mongodb://localhost:27017/graphdb', {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
+  useFindAndModify: false
 })
 
 const server = new GraphQLServer({
